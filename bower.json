@@ -1,0 +1,18 @@
+{
+    "name": "adapt-hideNavigation",
+    "repository": "git://github.com/jenisonltd/adapt-hideNavigation",
+    "homepage": "https://github.com/jenisonltd/adapt-hideNavigation",
+    "framework": "^2.0.0",
+    "version": "1.0.1",
+    "issues": "",
+    "displayName": "Hide Navigation",
+    "extension" : "hideNavigation",
+    "description": "This plugin hides the navigation bar when the page is scolled",
+    "main": "/js/adapt-hideNavigation.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-extension"
+    ],
+    "license": "GPLv3",
+    "targetAttribute": "_hideNavigation"
+}
