@@ -3,21 +3,30 @@ define(function(require) {
 	var Adapt = require('coreJS/adapt');
 	var AutoHide = require('extensions/adapt-hideNavigation/js/jquery.autohidingnavbar');
 
-	this.onDeviceChanges = function(){
+	function onDeviceChanged(width){
 
 		var imageWidth = width === 'medium' ? 'small' : width;
 
-		$('.size-' + imageWidth + ' .navigation').autoHidingNavbar({
-			showOnUpscrollOffset: -30,
-		});
+		if (imageWidth === 'large'){
+
+			$('.navigation').autoHidingNavbar('destroy');
+		}
+		else{
+
+			$('.navigation').autoHidingNavbar({
+				showOnUpscrollOffset: -30,
+			});
+		}
 	}
 
-	Adapt.on("pageView:postRender", function(view) {
-		var model = view.model;
-		if (model.get("_hideNavigation")) {
-			if (model.get("_hideNavigation")._isActive) {
+	Adapt.on("adapt:initialize", function() {
+		var config = Adapt.course.get("_hideNavigation");
+
+		if (config) {
+			if (config._isActive) {
 				
-				this.listenTo(Adapt, 'device:changed', this.onPageReady);
+				this.listenTo(Adapt, 'device:changed', onDeviceChanged);
+				onDeviceChanged(Adapt.device.screenSize);
 			}
 		}
 	});
