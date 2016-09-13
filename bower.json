@@ -7,7 +7,7 @@
     "issues": "",
     "displayName": "Hide Navigation",
     "extension" : "hideNavigation",
-    "description": "This plugin hides the navigation bar when the page is scolled",
+    "description": "This plugin hides the navigation bar when the page is scolled on small/medium screens",
     "main": "/js/adapt-hideNavigation.js",
     "keywords": [
         "adapt-plugin",
