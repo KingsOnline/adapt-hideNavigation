@@ -3,7 +3,7 @@
     "repository": "git://github.com/jenisonltd/adapt-hideNavigation",
     "homepage": "https://github.com/jenisonltd/adapt-hideNavigation",
     "framework": "^2.0.0",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "issues": "",
     "displayName": "Hide Navigation",
     "extension" : "hideNavigation",
